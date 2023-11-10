@@ -1,0 +1,61 @@
+:root {
+  /* шапка сайта */
+  --header-height: 60px;
+  --header-bg: #dbdbdb;
+
+  /* контейнер (ограничивает ширину сайта) */
+  --container-width: 900px;
+
+  /* Навигация (ссылки в шапке сайта) */
+  --nav-gap: 12px;
+  --nav-link-color: blue;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+}
+
+h1 {
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--header-bg);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: var(--nav-gap);
+}
+
+.nav__link {
+  color: var(--nav-link-color);
+}
+
+.main {
+  margin: 40px 0;
+}

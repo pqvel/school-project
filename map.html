@@ -21,20 +21,72 @@
     <!-- My css -->
     <link rel="stylesheet" href="./assets/styles/styles.css" />
     <title>Document</title>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=ff825919-4df7-4315-acbc-e118b7c2d7e1&lang=ru_RU&onload=initMap"
+      type="text/javascript"
+    ></script>
   </head>
   <body>
     <header class="header">
       <div class="container row">
         <div class="logo">Средняя школа №99</div>
-        <nav class="nav">
-          <a class="nav__link" href="./index.html">Главная</a>
-          <a class="nav__link" href="./practice.html">Практика</a>
-          <a class="nav__link" href="./map.html">Карта</a>
-          <a class="nav__link" href="./about.html">Про меня</a>
-        </nav>
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+          <nav class="nav menu__box">
+            <a class="nav__link" href="./index.html">Главная</a>
+            <a class="nav__link" href="./practice.html">Практика</a>
+            <a class="nav__link" href="./map.html">Карта</a>
+            <a class="nav__link" href="./about.html">Про меня</a>
+          </nav>
+        </div>
       </div>
     </header>
-    <main></main>
+    <main class="main">
+      <div class="container">
+        <table class="table">
+          <tr>
+            <td>Адрес:</td>
+            <td>улица Болеслава Берута, 13</td>
+          </tr>
+          <tr>
+            <td>Почтовый индекс:</td>
+            <td>220092</td>
+          </tr>
+          <tr>
+            <td>Город:</td>
+            <td>Минск</td>
+          </tr>
+          <tr>
+            <td>Телефон:</td>
+            <td>+375 29 754 2545</td>
+          </tr>
+        </table>
+        <div class="map-wrapper">
+          <div class="map" id="map"></div>
+        </div>
+      </div>
+    </main>
     <footer></footer>
+    <script type="text/javascript">
+      var myMap;
+      const coordinates = [53.902206, 27.508491];
+      // выполняем функцию инициализации карты указанную при загрузки API onload=initMap
+      function initMap(ymaps) {
+        myMap = new ymaps.Map("map", {
+          center: coordinates, // центр карты
+          zoom: 16, // коэффициент масштабирования,
+          maxZoom: 8,
+        });
+        myMap.geoObjects.add(
+          new ymaps.Placemark(coordinates, {
+            preset: "islands#icon",
+            iconColor: "#0095b6",
+          })
+        );
+      }
+    </script>
   </body>
 </html>

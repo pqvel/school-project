@@ -26,12 +26,18 @@
     <header class="header">
       <div class="container row">
         <div class="logo">Средняя школа №99</div>
-        <nav class="nav">
-          <a class="nav__link" href="./index.html">Главная</a>
-          <a class="nav__link" href="./practice.html">Практика</a>
-          <a class="nav__link" href="./map.html">Карта</a>
-          <a class="nav__link" href="./about.html">Про меня</a>
-        </nav>
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+          <nav class="nav menu__box">
+            <a class="nav__link" href="./index.html">Главная</a>
+            <a class="nav__link" href="./practice.html">Практика</a>
+            <a class="nav__link" href="./map.html">Карта</a>
+            <a class="nav__link" href="./about.html">Про меня</a>
+          </nav>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -88,7 +94,12 @@
             Мой первый урок прошел в 8 классе. Урок получился продуктивным и
             полезным для детей
           </p>
-          <img width="900" height="900" alt="тут могла быть ваша фотография" />
+          <img
+            class="img-content"
+            width="900"
+            height="900"
+            src="./assets/images/skeleton.png"
+          />
         </section>
       </div>
     </main>

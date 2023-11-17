@@ -26,12 +26,18 @@
     <header class="header">
       <div class="container row">
         <div class="logo">Средняя школа №99</div>
-        <nav class="nav">
-          <a class="nav__link" href="./index.html">Главная</a>
-          <a class="nav__link" href="./practice.html">Практика</a>
-          <a class="nav__link" href="./map.html">Карта</a>
-          <a class="nav__link" href="./about.html">Про меня</a>
-        </nav>
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+          <nav class="nav menu__box">
+            <a class="nav__link" href="./index.html">Главная</a>
+            <a class="nav__link" href="./practice.html">Практика</a>
+            <a class="nav__link" href="./map.html">Карта</a>
+            <a class="nav__link" href="./about.html">Про меня</a>
+          </nav>
+        </div>
       </div>
     </header>
     <main></main>

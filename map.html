@@ -69,7 +69,15 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="container">
+        <div>Контакты</div>
+        <ul>
+          <li><a href="tel:375297542545">+ 375 (29) 754 2545</a></li>
+          <li><a href="mailto:solyqnik@gmail.com">solyqnik@gmail.com</a></li>
+        </ul>
+      </div>
+    </footer>
     <script type="text/javascript">
       var myMap;
       const coordinates = [53.902206, 27.508491];
@@ -79,6 +87,8 @@
           center: coordinates, // центр карты
           zoom: 16, // коэффициент масштабирования,
           maxZoom: 8,
+          controls: [],
+          minZoom: 12,
         });
         myMap.geoObjects.add(
           new ymaps.Placemark(coordinates, {

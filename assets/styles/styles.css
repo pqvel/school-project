@@ -299,6 +299,7 @@ table td {
     height: 26px;
     cursor: pointer;
     position: relative;
+    z-index: 1;
   }
   /* добавляем "гамбургер" */
   .menu__btn > span,
@@ -337,6 +338,7 @@ table td {
     background-color: var(--header-bg);
     color: var(--header-color);
     box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1;
   }
   /* элементы меню */
   .menu__item {
@@ -357,7 +359,7 @@ table td {
     top: var(--header-height / 2);
     right: 12px;
     transform: translateY(-50%);
-    z-index: 1;
+    z-index: 5;
   }
 
   #menu__toggle:checked ~ .menu__btn > span {
@@ -370,6 +372,7 @@ table td {
   #menu__toggle:checked ~ .menu__btn > span::after {
     top: 0;
     transform: rotate(90deg);
+    z-index: 1;
   }
   #menu__toggle:checked ~ .menu__box {
     visibility: visible;

@@ -29,6 +29,12 @@ galleryItems.forEach((item, i) => {
   });
 });
 
+document
+  .querySelector(".popup-gallery-swiper__close")
+  .addEventListener("click", () => {
+    popupGallery.classList.remove("fadeIn");
+    popupGallery.classList.add("fadeOut");
+  });
 popupGallery.addEventListener("click", (e) => {
   popupGallery.classList.remove("fadeIn");
   popupGallery.classList.add("fadeOut");

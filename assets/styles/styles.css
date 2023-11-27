@@ -230,6 +230,23 @@ table td {
   border-radius: 20px;
 }
 
+.popup-gallery-swiper__close {
+  border: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background: none;
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+  z-index: 100;
+  top: 12px;
+  right: 12px;
+  background: white;
+}
+
 .popup-gallery-swiper .swiper-slide {
   width: 100%;
   height: 100%;
@@ -247,10 +264,12 @@ table td {
 }
 
 .fadeIn {
+  display: flex;
   animation: fadeIn 300 ease-in forwards;
 }
 
 .fadeOut {
+  display: none;
   animation: fadeOut 300 ease-out forwards;
 }
 
